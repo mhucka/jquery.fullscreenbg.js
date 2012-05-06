@@ -4,7 +4,7 @@ jquery.fullscreenbg.js
 A lightweight plugin for jQuery to provide auto-resized, full-screen or
 full-width background image
 
-- - -
+----
 
 Author:        Michael Hucka (http://www.cds.caltech.edu/~mhucka) based on code
                by Jan Schneiders (http://nanotux.com).  See the bottom of this
@@ -18,7 +18,7 @@ Dependencies:  This relies on jQuery and the jQuery plugin
                "imagesLoaded.js" (commit ff65027665) from
                https://github.com/desandro/imagesloaded (2012-02-01).
 
-USAGE
+Usage
 -----
 
 This looks for an element with a specific id (default: #bgimg).  It checks
@@ -101,7 +101,7 @@ If for some reason you want to use a different identifier than #bgimg, change
 the value set for bgID in the code shown in step #2 above.
 
 
-HISTORY
+History
 -------
 
 The method and the original code are based on "Fullscreenr - lightweight full
