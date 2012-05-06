@@ -132,17 +132,17 @@ Contributing
 I welcome improvements of all kinds, to the code and to the documentation.
 Please feel free to contact me or do the following:
 
-1. Fork this repo.
+1. Fork this repo.  See the links at the top of the github page.
 2. Create your feature branch (`git checkout -b my-new-feature`) and write
 your changes to the code or documentation.
-3. Commit your changes (`git commit -am 'Added some feature'`).
+3. Commit your changes (`git commit -am 'Describe your changes here'`).
 4. Push to the branch (`git push origin my-new-feature`).
 5. Create a new pull request to notify me of your suggested changes.
 
 License
 -------
 
-This plugin is in the public domain.
+This code is in the public domain.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
