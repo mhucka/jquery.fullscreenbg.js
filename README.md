@@ -39,16 +39,16 @@ and rescaled.  (See step #5 below.)
 
 Here is an example of using this plugin in a web page:
 
-**1**\. Place the file "jquery.fullscreenbg.min.js" in a directory where you put
+**1**. Place the file "jquery.fullscreenbg.min.js" in a directory where you put
 other Javascript files for your web pages.  The rest of these instructions
 assume that your Javascript files are located in a subdirectory named "js" in
 the root directory of your site.  
 
-**2**\. If you have not already done so, download the "imagesLoaded.js" jQuery
+**2**. If you have not already done so, download the "imagesLoaded.js" jQuery
 plugin and place it in your "js" directory.  (See
 https://github.com/desandro/imagesloaded for the code.)
 
-**3**\. (Optional) Create a Javascript file that will serve to load all the other
+**3**. (Optional) Create a Javascript file that will serve to load all the other
 Javascript files for your web pages.  The rest of these instructions assume
 that this file is named "main.js".  Put the following code in "main.js":
 
@@ -60,7 +60,7 @@ $.getScript('js/jquery.imagesloaded.js', function() {
 });
 ~~~~~
 
-**4**\. In the HTML file for each page that will contain the background image,
+**4**. In the HTML file for each page that will contain the background image,
 put the following in the `<head>` element (again, assuming that you are using
 the "main.js" approach and all your JavaScript files are in a directory named
 "js"):
@@ -70,7 +70,7 @@ the "main.js" approach and all your JavaScript files are in a directory named
 <script src="js/main.js" type="text/javascript"></script>
 ~~~~~
 
-**5**\. In that same HTML file, put an `<img>` element after your `<body>`
+**5**. In that same HTML file, put an `<img>` element after your `<body>`
 element that refers to the image you want on the background, and has the id
 `#bgimg`.  Example:
 
@@ -95,7 +95,7 @@ rather than fitted in both dimensions, add the attribute `widthOnly` to the
 <img id="bgimg"src="another-image.jpg" widthOnly>
 ~~~~~
 
-**6**\. In your CSS file (in this example called "css/style.css"), include the
+**6**. In your CSS file (in this example called "css/style.css"), include the
 following to define `#bgimg` with `position: absolute` and `visibility:
 hidden` as discussed above.
 
