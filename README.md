@@ -64,16 +64,15 @@ $.getScript('js/jquery.imagesloaded.js', function() {
    id `#bgimg`.  Example:
 ```HTML
 DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-&lt;html&gt;
+<html>
 <head>
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
   <script src="js/main.js" type="text/javascript"></script>
 </head>
-
 <body>
 <img id="bgimg" src="media/images/index-bg.jpg">
-... rest of page ...
+  ... rest of page ...
 ```
 
 5. In your CSS file (in this example called "css/style.css"), include the
