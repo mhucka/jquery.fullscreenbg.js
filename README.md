@@ -64,7 +64,7 @@ $.getScript('js/jquery.imagesloaded.js', function() {
    id `#bgimg`.  Example:
 ```HTML
 DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-tml>
+&lt;html&gt;
 <head>
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
