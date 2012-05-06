@@ -10,13 +10,17 @@ full-width background image
 by Jan Schneiders (http://nanotux.com).  See the bottom of this file for
 more information.
 
-*License*:       This file is in the public domain.
+*License*:       jquery.fullscreenbg.js is in the public domain.
 
 *Repository*:    https://github.com/mhucka/jquery.fullscreenbg.js
  
-*Dependencies*: This relies on jQuery and the jQuery plugin
-"imagesLoaded.js" (commit ff65027665) from
-https://github.com/desandro/imagesloaded (2012-02-01).
+Requirements
+------------
+
+This needs jQuery and the jQuery plugin "imagesLoaded.js" to be loaded prior
+to use.  (For "imagesLoaded.js" I use the version of commit ff65027665, date
+2012-02-01, from https://github.com/desandro/imagesloaded .)  An explanation
+of how to load everything is given below.
 
 Usage
 -----
@@ -116,8 +120,21 @@ History and acknowledgments
 The method and the original code are based on "Fullscreenr - lightweight full
 screen background jquery plugin" by Jan Schneiders, version 1.0, obtained
 from the web page http://nanotux.com/blog/fullscreen/ in late 2011.  I could
-find no distribution statement or copyright associated with the file or on
-the web page (last checked: 2012-04-06).  The original downloaded file had a
-modification date of Nov. 28, 2009.  I've modified the code sufficiently that
-the original author might not appreciate having this called by the same name,
-hence the renamed file.
+find no distribution statement, copyright or even an email address associated
+with the file or on the web page (last checked: 2012-04-06).  The original
+downloaded file had a modification date of Nov. 28, 2009.  I've modified the
+code sufficiently that the original author might not appreciate having this
+called by the same name, hence the renamed file.
+
+License
+-------
+
+This plugin is in the public domain.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
