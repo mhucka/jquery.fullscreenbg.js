@@ -140,7 +140,6 @@
       // Get browser window size.
       var browserwidth = $(window).width();
       var browserheight = $(window).height();
-      var ratio = options.height / options.width;       
 
       // Scale the image in both dimensions.
       var ratio = options.height / options.width;
