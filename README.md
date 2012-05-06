@@ -39,18 +39,19 @@ and rescaled.  (See step #5 below.)
 
 Here is an example of using this plugin in a web page:
 
-**1**. Place the file "jquery.fullscreenbg.min.js" in a directory where you put
-other Javascript files for your web pages.  The rest of these instructions
-assume that your Javascript files are located in a subdirectory named "js" in
-the root directory of your site.  
+**1**. Place the file "jquery.fullscreenbg.min.js" in a directory where you
+put other Javascript files for your web pages.  The rest of these
+instructions assume that your Javascript files are located in a subdirectory
+named "js" in the root directory of your site.
 
 **2**. If you have not already done so, download the "imagesLoaded.js" jQuery
 plugin and place it in your "js" directory.  (See
 https://github.com/desandro/imagesloaded for the code.)
 
-**3**. (Optional) Create a Javascript file that will serve to load all the other
-Javascript files for your web pages.  The rest of these instructions assume
-that this file is named "main.js".  Put the following code in "main.js":
+**3**. (Optional) Create a Javascript file that will serve to load all the
+other Javascript files for your web pages.  The rest of these instructions
+assume that this file is named "main.js".  Put the following code in
+"main.js":
 
 ~~~~~javascript
 $.getScript('js/jquery.imagesloaded.js', function() {
