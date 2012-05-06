@@ -10,7 +10,7 @@ full-width background image
 by Jan Schneiders (http://nanotux.com).  See the bottom of this file for
 more information.
 
-*License*:       jquery.fullscreenbg.js is in the public domain.
+*License*:       This fullscreenbg plugin is in the public domain.
 
 *Repository*:    https://github.com/mhucka/jquery.fullscreenbg.js
  
@@ -42,8 +42,8 @@ Here is an example of loading this plugin:
 1\. Download the jquery.imagesload.js plugin and put it in a directory where
 you put Javascript files in your site.  The rest of these instructions
 assume that your Javascript files are located in a subdirectory named "js"
-in the root directory of your site.  Also store this file
-(jquery.fullscreenbg.js) in that same directory.
+in the root directory of your site.  Also store the fullscreenbg plugin
+file ("jquery.fullscreenbg.min.js") in that same directory.
 
 2\. Create a Javascript file that will serve to load other Javascript files
 for your web pages.  The rest of these instructions assume that this file
@@ -51,7 +51,7 @@ is named "main.js".  Put the following code in it:
 
 ~~~~~javascript
 $.getScript('js/jquery.imagesloaded.js', function() {
-  $.getScript('js/jquery.fullscreenbg.js', function() {
+  $.getScript('js/jquery.fullscreenbg.min.js', function() {
     jQuery.fn.fullscreenbg({ bgID: '#bgimg' });
   });
 });
@@ -113,7 +113,6 @@ rather than fitted in both dimensions, add the attribute `widthOnly` to the
 If for some reason you want to use a different identifier than `#bgimg`, change
 the value set for `bgID` in the code shown in step #2 above.
 
-
 History and acknowledgments
 ---------------------------
 
@@ -125,6 +124,8 @@ with the file or on the web page (last checked: 2012-04-06).  The original
 downloaded file had a modification date of Nov. 28, 2009.  I've modified the
 code sufficiently that the original author might not appreciate having this
 called by the same name, hence the renamed file.
+
+I generated the minified version of jquery.fullscreenbg.js using JSMin.
 
 Contributing
 ------------
