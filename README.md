@@ -33,25 +33,18 @@ the image visibility to `hidden` in the CSS style.  This code will
 automatically reset visibility to `visible` when the image is loaded and
 rescaled.  (See step #5 below.)
 
-~~~~~javascript
-$.getScript('js/jquery.imagesloaded.js', function() {
-  $.getScript('js/jquery.fullscreenbg.js', function() {
-    jQuery.fn.fullscreenbg({ bgID: '#bgimg' });
-  });
-});
-~~~~~
-
 Here is an example of loading this plugin:
 
-1. Download the jquery.imagesload.js plugin and put it in a directory where
-   you put Javascript files in your site.  The rest of these instructions
-   assume that your Javascript files are located in a subdirectory named "js"
-   in the root directory of your site.  Also store this file
-   (jquery.fullscreenbg.js) in that same directory.
+1\. Download the jquery.imagesload.js plugin and put it in a directory where
+you put Javascript files in your site.  The rest of these instructions
+assume that your Javascript files are located in a subdirectory named "js"
+in the root directory of your site.  Also store this file
+(jquery.fullscreenbg.js) in that same directory.
 
-2. Create a Javascript file that will serve to load other Javascript files
-   for your web pages.  The rest of these instructions assume that this file
-   is named "main.js".  Put the following code in it:
+2\. Create a Javascript file that will serve to load other Javascript files
+for your web pages.  The rest of these instructions assume that this file
+is named "main.js".  Put the following code in it:
+
 ~~~~~javascript
 $.getScript('js/jquery.imagesloaded.js', function() {
   $.getScript('js/jquery.fullscreenbg.js', function() {
@@ -60,16 +53,18 @@ $.getScript('js/jquery.imagesloaded.js', function() {
 });
 ~~~~~
 
-3. In the HTML file for the page that will contain the background image, put
-   the following in the `<head>` element:
+3\. In the HTML file for the page that will contain the background image, put
+the following in the `<head>` element:
+
 ~~~~~HTML
 <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
 ~~~~~
 
-4. In that same HTML file, put an `<img>` element after your `<body>`
-   element that refers to the image you want on the background, and has the
-   id `#bgimg`.  Example:
+4\. In that same HTML file, put an `<img>` element after your `<body>`
+element that refers to the image you want on the background, and has the
+id `#bgimg`.  Example:
+
 ~~~~~HTML
 DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -83,9 +78,10 @@ DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
   ... rest of page ...
 ~~~~~
 
-5. In your CSS file (in this example called "css/style.css"), include the
-   following to define `#bgimg` with `position: absolute` and `visibility:
-   hidden` as discussed above.
+5\. In your CSS file (in this example called "css/style.css"), include the
+following to define `#bgimg` with `position: absolute` and `visibility:
+hidden` as discussed above.
+
 ~~~~~CSS
 #bgimg {
   position: absolute;
@@ -101,12 +97,15 @@ body {
   width: 100%;
 }
 ~~~~~
+
 If the image should only be scaled to the full width of the browser window,
 rather than fitted in both dimensions, add the attribute `widthOnly` to the
 `<img>` element.  Example:
+
 ~~~~~HTML
 <img id="bgimg" widthOnly src="another-image.jpg">
 ~~~~~
+
 If for some reason you want to use a different identifier than `#bgimg`, change
 the value set for `bgID` in the code shown in step #2 above.
 
