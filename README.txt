@@ -1,7 +1,8 @@
                            jquery.fullscreenbg.js
 
-          A lightweight plugin for jQuery to provide auto-resized,
-                 full-screen or full-width background image
+    A lightweight plugin for jQuery to support an automatically-resized
+         full-screen or full-width background image on a web page.
+
 
                                   ---- ----
 
