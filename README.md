@@ -42,8 +42,8 @@ Here is an example of loading this plugin:
    (jquery.fullscreenbg.js) in that same directory.
 
 2. Create a Javascript file that will serve to load other Javascript files
-   for your web pages.  The rest of these instructions assume that this file
-   is named "main.js".  Put the following code in it:
+for your web pages.  The rest of these instructions assume that this file
+is named "main.js".  Put the following code in it:
 ~~~~~javascript
 $.getScript('js/jquery.imagesloaded.js', function() {
   $.getScript('js/jquery.fullscreenbg.js', function() {
