@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jquery.fullscreenbg.js by mhucka</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Jquery.fullscreenbg.js</h1>
+        <p>A lightweight plugin for jQuery to support an automatically-resized full-screen or full-width background image on a web page.</p>
+        <p class="view"><a href="https://github.com/mhucka/jquery.fullscreenbg.js">View the Project on GitHub <small>mhucka/jquery.fullscreenbg.js</small></a></p>
+        <ul>
+          <li><a href="https://github.com/mhucka/jquery.fullscreenbg.js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mhucka/jquery.fullscreenbg.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mhucka/jquery.fullscreenbg.js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>jquery.fullscreenbg.js</h1>
+
+<p>A lightweight plugin for jQuery to support an automatically-resized
+full-screen or full-width background image on a web page.</p>
+
+<hr><p><em>Author</em>: Michael Hucka (<a href="http://www.cds.caltech.edu/%7Emhucka">http://www.cds.caltech.edu/~mhucka</a>) based on code
+by Jan Schneiders (<a href="http://nanotux.com">http://nanotux.com</a>).  See the bottom of this file for
+more information.</p>
+
+<p><em>License</em>:       This fullscreenbg plugin is in the public domain.</p>
+
+<p><em>Repository</em>:    <a href="https://github.com/mhucka/jquery.fullscreenbg.js">https://github.com/mhucka/jquery.fullscreenbg.js</a></p>
+
+<h2>Requirements</h2>
+
+<p>This needs jQuery and the jQuery plugin "imagesLoaded.js" to be loaded prior
+to use.  (For "imagesLoaded.js" I use the version of commit ff65027665, date
+2012-02-01, from <a href="https://github.com/desandro/imagesloaded">https://github.com/desandro/imagesloaded</a> .)  An explanation
+of how to load everything is given below.</p>
+
+<h2>Usage</h2>
+
+<p>This looks for an element with a specific id (default: <code>#bgimg</code>).  It checks
+that it's an <code>&lt;img&gt;</code> element, and if it is, it resizes the image to the
+current size of the window.  Optionally, it will only resize the width of the
+image if the <code>&lt;img&gt;</code> element contains the attribute <code>widthOnly</code>.  It binds
+the resizing function to the DOM "onresize" event handler so that the image
+is continually resized as the user resizes the window.</p>
+
+<p>Note: to avoid the image blinking when the page is first loaded, make sure to
+<em>set the image visibility to <code>hidden</code> in the CSS style</em>.  This code will
+automatically reset visibility to <code>visible</code> when the image is actually loaded
+and rescaled.  (See step #5 below.)</p>
+
+<p>Here is an example of using this plugin in a web page:</p>
+
+<p><strong>1</strong>. Place the file "jquery.fullscreenbg.min.js" in a directory where you
+put other Javascript files for your web pages.  The rest of these
+instructions assume that your Javascript files are located in a subdirectory
+named "js" in the root directory of your site.</p>
+
+<p><strong>2</strong>. If you have not already done so, download the "imagesLoaded.js" jQuery
+plugin and place it in your "js" directory.  (See
+<a href="https://github.com/desandro/imagesloaded">https://github.com/desandro/imagesloaded</a> for the code.)</p>
+
+<p><strong>3</strong>. (Optional) Create a Javascript file that will serve to load all the
+other Javascript files for your web pages.  The rest of these instructions
+assume that this file is named "main.js".  Put the following code in
+"main.js":</p>
+
+<div class="highlight">
+<pre><span class="nx">$</span><span class="p">.</span><span class="nx">getScript</span><span class="p">(</span><span class="s1">'js/jquery.imagesloaded.js'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">.</span><span class="nx">getScript</span><span class="p">(</span><span class="s1">'js/jquery.fullscreenbg.min.js'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">jQuery</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">fullscreenbg</span><span class="p">({</span> <span class="nx">bgID</span><span class="o">:</span> <span class="s1">'#bgimg'</span> <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre>
+</div>
+
+
+<p><strong>4</strong>. In the HTML file for each page that will contain the background image,
+put the following in the <code>&lt;head&gt;</code> element (again, assuming that you are using
+the "main.js" approach and all your JavaScript files are in a directory named
+"js"):</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/jquery-1.7.1.min.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/main.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre>
+</div>
+
+
+<p><strong>5</strong>. In that same HTML file, put an <code>&lt;img&gt;</code> element after your <code>&lt;body&gt;</code>
+element that refers to the image you want on the background, and has the id
+<code>#bgimg</code>.  Example:</p>
+
+<div class="highlight">
+<pre>DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"css/style.css"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/jquery-1.7.1.min.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/main.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">id=</span><span class="s">"bgimg"</span> <span class="na">src=</span><span class="s">"my-background-image.jpg"</span><span class="nt">&gt;</span>
+  ... rest of page ...
+</pre>
+</div>
+
+
+<p>If the image should only be scaled to the full width of the browser window,
+rather than fitted in both dimensions, add the attribute <code>widthOnly</code> to the
+<code>&lt;img&gt;</code> element.  Example:</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;img</span> <span class="na">id=</span><span class="s">"bgimg"</span><span class="na">src=</span><span class="s">"another-image.jpg"</span> <span class="na">widthOnly</span><span class="nt">&gt;</span>
+</pre>
+</div>
+
+
+<p><strong>6</strong>. In your CSS file (in this example called "css/style.css"), include the
+following to define <code>#bgimg</code> with <code>position: absolute</code> and <code>visibility:
+hidden</code> as discussed above.</p>
+
+<div class="highlight">
+<pre><span class="nf">#bgimg</span> <span class="p">{</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+  <span class="k">z-index</span><span class="o">:</span>  <span class="m">-1</span><span class="p">;</span>
+  <span class="k">visibility</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span> <span class="c">/* Eliminates scrollbars caused by the bkgnd image. */</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>        <span class="c">/* Necessary for the raster to fill the screen. */</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+
+<p>If for some reason you want to use a different image identifier than
+<code>#bgimg</code>, then change the value set for <code>bgID</code> in the code shown in step #2,
+change the value of the <code>&lt;img&gt;</code> element's <code>id</code> in step #5, and change the CSS
+identifier <code>#bgimg</code> in step 6.</p>
+
+<h2>History and acknowledgments</h2>
+
+<p>The method and the original code are based on "Fullscreenr - lightweight
+full screen background jquery plugin" by Jan Schneiders, version 1.0,
+obtained from the web page <a href="http://nanotux.com/blog/fullscreen/">http://nanotux.com/blog/fullscreen/</a> in late
+2011.  The original downloaded file had a modification date of Nov. 28,
+2009.  I contacted the author in April 2012, and obtained his permission to
+allow this modified version of his code to be released under the new name
+"fullscreenbg" and placed in the public domain.</p>
+
+<p>I generated the minified version of jquery.fullscreenbg.js using JSMin.</p>
+
+<h2>Contributing</h2>
+
+<p>I welcome improvements of all kinds, to the code and to the documentation.
+Please feel free to contact me or do the following:</p>
+
+<ol>
+<li>Fork this repo.  See the links at the top of the github page.</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>) and write
+your changes to the code or documentation.</li>
+<li>Commit your changes (<code>git commit -am 'Describe your changes here'</code>).</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>).</li>
+<li>Create a new pull request to notify me of your suggested changes.</li>
+</ol><h2>License</h2>
+
+<p>This code is in the public domain.</p>
+
+<p>THIS SOFTWARE IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT WITHOUT
+ANY WARRANTY, WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS
+FOR A PARTICULAR PURPOSE.  THE SOFTWARE AND DOCUMENTATION PROVIDED HEREUNDER
+IS ON AN "AS IS" BASIS, AND THE AUTHORS HAVE NO OBLIGATIONS TO PROVIDE
+MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS.  IN NO EVENT
+SHALL THE AUTHORS BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL,
+INCIDENTAL OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF
+THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE AUTHORS HAVE BEEN
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/mhucka">mhucka</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-27668668-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
