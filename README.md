@@ -125,14 +125,13 @@ identifier `#bgimg` in step 6.
 History and acknowledgments
 ---------------------------
 
-The method and the original code are based on "Fullscreenr - lightweight full
-screen background jquery plugin" by Jan Schneiders, version 1.0, obtained
-from the web page http://nanotux.com/blog/fullscreen/ in late 2011.  I could
-find no distribution statement, copyright or even an email address associated
-with the file or on the web page (last checked: 2012-04-06).  The original
-downloaded file had a modification date of Nov. 28, 2009.  I've modified the
-code sufficiently that the original author might not appreciate having this
-called by the same name, hence the renamed file.
+The method and the original code are based on "Fullscreenr - lightweight
+full screen background jquery plugin" by Jan Schneiders, version 1.0,
+obtained from the web page http://nanotux.com/blog/fullscreen/ in late
+2011.  The original downloaded file had a modification date of Nov. 28,
+2009.  I contacted the author in April 2012, and obtained his permission to
+allow this modified version of his code to be released under the new name
+"fullscreenbg" and placed in the public domain.
 
 I generated the minified version of jquery.fullscreenbg.js using JSMin.
 
