@@ -12,7 +12,10 @@ more information.
 
 *License*:       This fullscreenbg plugin is in the public domain.
 
+*Project page*:  http://mhucka.github.io/jquery.fullscreenbg.js
+
 *Repository*:    https://github.com/mhucka/jquery.fullscreenbg.js
+
  
 Requirements
 ------------
@@ -21,6 +24,7 @@ This needs jQuery and the jQuery plugin "imagesLoaded.js" to be loaded prior
 to use.  (For "imagesLoaded.js" I use the version of commit ff65027665, date
 2012-02-01, from https://github.com/desandro/imagesloaded .)  An explanation
 of how to load everything is given below.
+
 
 Usage
 -----
@@ -135,6 +139,7 @@ allow this modified version of his code to be released under the new name
 
 I generated the minified version of jquery.fullscreenbg.js using JSMin.
 
+
 Contributing
 ------------
 
@@ -147,6 +152,7 @@ your changes to the code or documentation.
 3. Commit your changes (`git commit -am 'Describe your changes here'`).
 4. Push to the branch (`git push origin my-new-feature`).
 5. Create a new pull request to notify me of your suggested changes.
+
 
 License
 -------
